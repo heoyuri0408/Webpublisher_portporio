@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>허유리 포트폴리오</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- 풀페이지 -->
+     <link rel="stylesheet" href="./css/jquery.fullpage.css">
+    <script src="js/jquery.fullpage.js"></script>
+    <style>
+    </style>
+    <script>
+        //풀페이지
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+                autoScrolling:true,
+                scrollHorizontally: true,
+                continuousVertical: false,
+                controlArrows: true,
+                scrollingSpeed: 1000,
+                slideColor:['whitesmoke', '#000'],
+
+                // 네비게이션 바 설정
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['intro','about me','project', 'desgin', 'contact'],
+                anchor: ['intro','about me','project', 'desgin', 'contact'],
+            });
+        
+        //project 이미지박스 호버 시, 이미지 변경+애니메이션 클래스
+        $(function(){
+            $('.img_box').mouseover(function(){
+                $('.logo').hide();
+                $(this).children('img').addClass('img_slide');
+            }).mouseout(function(){
+                $('.logo').show();
+                $(this).children('img').removeClass('img_slide');
+            })
+        })
+
+        // 이미지 클릭 시 이미지 크게 보이는 스크립트 구현.
+        $(function(){
+            // 클릭한 이미지의 src 연결
+            // $('.fp-tableCell>ul>li').click(function(){
+            // $('.view').css('display','block');
+            //     // let imgSrc = $(this).children('img').attr('src');
+            //     // $('.view>img').attr('src',imgSrc);
+            // })
+            
+            // 순서 접근
+            $('.fp-tableCell>ul>li:nth-child(1)').click(function(){
+                $('.view').css('display','block');
+                $('.view>.imgBox>img').attr('src','./img/desgin/romand_banner1.jpg');
+            })
+            $('.fp-tableCell>ul>li:nth-child(2)').click(function(){
+                $('.view').css('display','block');
+                $('.view>.imgBox>img').attr('src','./img/desgin/romand_banner2.jpg');
+            })
+            $('.fp-tableCell>ul>li:nth-child(3)').click(function(){
+                $('.view').css('display','block');
+                $('.view>.imgBox>img').attr('src','./img/desgin/romand_banner_모음.jpg');
+                $('.view>.imgBox').css('overflow-y','scroll');
+            })
+            $('.fp-tableCell>ul>li:nth-child(4)').click(function(){
+                $('.view').css('display','block');
+                $('.view>.imgBox>img').attr('src','./img/desgin/주얼리웹페이지.jpg');
+                $('.view>.imgBox').css('overflow-y','scroll');
+            })
+            $('.fp-tableCell>ul>li:nth-child(5)').click(function(){
+                $('.view').css('display','block');
+                $('.view>.imgBox>img').attr('src','./img/desgin/고체향수상세페이지.jpg');
+                $('.view>.imgBox').css('overflow-y','scroll');
+            })
+
+            $('.view').click(function(){
+                $(this).hide();
+            })
+        })
+        });
+    </script>
+</head>
+<body>
+    <div id="fullpage">
+        <!-- INTRO -->
+        <div class="section active" id="section1">
+            <div class="fp-bg">
+                <h1 class="maintitle">PORTPORIO</h1>
+                <div class="textbaner">
+                    <p>web design & web publisher</p>
+                    <p>heoyuri</p>
+                    <p>e-mail:dbfl020408@naver.com</p>
+                </div>
+                <!-- 투명 원 -->
+                <img src="./img/small-circle.png" alt="samll-circle" class="small-circle">
+                <img src="./img/small-circle.png" alt="samll-circle" class="small-circle2">
+                <img src="./img/small-circle.png" alt="samll-circle" class="small-circle3">
+                <img src="./img/small-circle.png" alt="samll-circle" class="small-circle4">
+                <img src="./img/small-circle.png" alt="samll-circle" class="small-circle5">
+            </div>
+            
+        </div>
+        <!-- ABOUT ME -->
+        <div class="section" id="section2">
+                <!-- <p class="typing "></p> -->
+                <h2 class="typing">#책임감 #성실함 #성장하려는 열정 한 가득</h2>
+            <div class="textcontainer">
+                <div class="left">
+                    <h2><span style="font-size: 30px;">허유리</span> <span style="font-weight: 400; font-size: 16px;">heoyuri 2002.04.08</span></h2>
+                    <p>안녕하세요. 저는 디자인을 겸한 웹 퍼블리셔로서 첫걸음을 내딛고 있으며, 
+                        앞으로도 성실함과 끈기를 바탕으로 계속해서 성장할 계획입니다.<br>
+                         빠른 업무 적응과 최신 기술을 적극적으로 적용할 수 있도록 공부할 것이며, 트렌디한 디자인과
+                          효율적인 퍼블리싱을 결합한 웹사이트를 만들고 싶습니다.</p>
+                </div>
+                <div class="center">
+                    <div class="textbox1">
+                        <h2>EXPERIENCE</h2>
+                        <p>● 2022.10 - 2023.06</p>
+                        <p>(주)라이브워크 물류팀 사무직 근무</p>
+                    </div>
+                    <div class="textbox2">
+                        <h2>EDUCATION</h2>
+                        <p>● 2024.08 - 2025.01</p>
+                        <p>더조은아카데미학원 UI/UX 웹디자인(웹퍼블리셔)과정 수료</p>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <h2>SKILL</h2>
+                    <h3>web</h3>
+                    <ul>
+                        <li><img src="./img/로고/html.png" alt="html_logo"></li>
+                        <li><img src="./img/로고/css.png" alt="css_logo"></li>
+                        <li><img src="./img/로고/javascript.png" alt="script_logo"></li>
+                        <li><img src="./img/로고/jquery.png" alt="jquery_logo"></li>
+                        <li><img src="./img/로고/git.png" alt="git_logo"></li>
+                        <li><img src="./img/로고/react.png" alt="react_logo"></li>
+                    </ul>
+                    <h3>desgin</h3>
+                    <ul>
+                        <li><img src="./img/로고/ps.png" alt="photoshop_logo"></li>
+                        <li><img src="./img/로고/ai.png" alt="illustrator_logo"></li>
+                        <li><img src="./img/로고/lr.png" alt="rightroom_logo"></li>
+                        <li><img src="./img/로고/figma.png" alt="figma_logo"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- PROJECT -->
+        <div class="section" id="section3">
+            <div class="slide">
+                <h1>PROJECT 1</h1>
+                <div class="box">
+                    <div class="img_box">
+                        <img class="logo" src="./img/project/romand_logo.jpg" alt="롬앤 로고">
+                        <img src="./img/project/romand.jpg" alt="롬앤 프로젝트 이미지">
+                    </div>
+                    <div class="slide_textbox">
+                        <h2>롬앤</h2>
+                        <ul>
+                            <li><img src="./img/로고/html.png" alt="html_logo"></li>
+                            <li><img src="./img/로고/css.png" alt="css_logo"></li>
+                            <li><img src="./img/로고/javascript.png" alt="javascript_logo"></li>
+                            <li><img src="./img/로고/jquery.png" alt="jquery_logo"></li>
+                            <li><img src="./img/로고/ps.png" alt="photoshop_logo"></li>
+                            <li><img src="./img/로고/ai.png" alt="illustrator_logo"></li>
+                            <li><img src="./img/로고/figma.png" alt="figma_logo"></li>
+                        </ul>
+                        <p>작업인원: 3명 | 기여도 : 60%</p>
+                        <p style="margin-bottom: 40px;">
+                            현재 롬앤 사이트는 모바일 적응형 사이트로 제공 중입니다.
+                             pc 이용자를 고려하면서 모바일에도 대응 가능한 반응형 사이트로 제작하였습니다.<br>
+                             비주얼적 이미지를 적극 활용하여 판매중인 상품을 강조하려 하였고,<br> 
+                             브랜드 내 이루어지는 가치있는 활동들의 컨텐츠들을 한 눈에 보이게 배치 했습니다.
+                        </p>
+                        <a href="https://romand.co.kr/article/%EC%9D%B4%EB%B2%A4%ED%8A%B8/13/171512/?gad_source=1&gclid=EAIaIQobChMIifzLvt6wigMVynF_AB37wRCeEAAYASAAEgI-0fD_BwE" target="_blank">기존 사이트</a>
+                        <a href="https://yurim0315.github.io/rom-nd/" target="_blank">작업 사이트</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <h1>project 2</h1>
+                <div class="box">
+                    <div class="img_box">
+                        <img class="logo" src="./img/project/gongcha_logo.jpg" alt="공차 로고">
+                        <img src="./img/project/gongcha.jpg" alt="공차 프로젝트 이미지">
+                    </div>
+                    <div class="slide_textbox">
+                        <h2>공차</h2>
+                        <ul>
+                            <li><img src="./img/로고/html.png" alt="html_logo"></li>
+                            <li><img src="./img/로고/css.png" alt="css_logo"></li>
+                            <li><img src="./img/로고/ps.png" alt="photoshop_logo"></li>
+                        </ul>
+                        <p>작업인원: 3명 | 기여도 : 70%</p>
+                        <p style="margin-bottom: 40px;">
+                            경쟁사 사이트들은 메뉴의 비주얼을 돋보이게 하는 레이아웃 구조와 이미지를 사용하여 소비자에게 직관적인 정보를 제공해 주는 것 같았습니다.<br>
+                            이를 참고하여 레이아웃을 바꾸었고, 풀페이지 형식으로 구성했습니다.
+                        </p>
+                        <a href="https://www.gong-cha.co.kr/brand/" target="_blank">기존 사이트</a>
+                        <a href="https://heoyuri0408.github.io/gongcha/" target="_blank">작업 사이트</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <h1>project 3</h1>
+                <div class="box">
+                    <div class="img_box">
+                        <img class="logo" src="./img/project/fujifilm_logo.jpg" alt="후지필름로고">
+                        <img src="./img/project/fujifilm.jpg" alt="후지필름 프로젝트 이미지">
+                    </div>
+                    <div class="slide_textbox">
+                        <h2>후지필름몰</h2>
+                        <ul>
+                            <li><img src="./img/로고/html.png" alt="html_logo"></li>
+                            <li><img src="./img/로고/css.png" alt="css_logo"></li>
+                            <li><img src="./img/로고/javascript.png" alt="javascript_logo"></li>
+                            <li><img src="./img/로고/jquery.png" alt="jquery_logo"></li>
+                        </ul>
+                        <p>기여도 : 100%</p>
+                        <p style="margin-bottom: 40px;">
+                            플러그인 사용과 jquery를 이용한 애니메이션 구현을 중점으로 한 작업입니다.
+                        </p>
+                        <a href="https://www.fujifilm.co.kr/main.do" target="_blank">기존 사이트</a>
+                        <a href="https://heoyuri0408.github.io/fujifilm/" target="_blank">작업 사이트</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DESGIN -->
+        <div class="section" id="section4">
+            <!-- view클래스 : 클릭 시 이미지 크게 보임 -->
+            <div class="view" style="display: none;">
+                <div class="imgBox">
+                    <img src="#" alt="클릭한 이미지">
+                </div>
+            </div>
+            <h1>DESIGN</h1>
+            <ul>
+                <li class="small_img">
+                    <img src="./img/desgin/romand_banner1.jpg" alt="romand_banner1">
+                    <p>롬앤 프로젝트_배너</p>
+                </li>
+                <li>
+                    <img src="./img/desgin/romand_banner2.jpg" alt="romand_banner2">
+                    <p>롬앤 프로젝트_배너</p>
+                </li>
+                <li>
+                    <img src="./img/desgin/romand_banner_모음_썸네일.jpg" alt="">
+                    <p>롬앤 프로젝트(서브 페이지)_배너</p>
+                </li>
+                <li>
+                    <img src="./img/desgin/주얼리썸네일.jpg" alt="주얼리웹페이지_썸네일">
+                    <p>주얼리 웹페이지 디자인</p>
+                </li>
+                <li>
+                    <img src="./img/desgin/향수상세페이지_썸네일.jpg" alt="고체향수_상세페이지">
+                    <p>고체향수 상세페이지</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section" id="section5">
+            <h1>TANK YOU</h1>
+            <ul>
+                <li><p>tell : 010-5702-7566</p></li>
+                <li><p>e-mail : dbfl020408@naver.com</p></li>
+            </ul>
+            <!-- 작은 원 키프레임 move1 적용-->
+            <img src="./img/small-circle.png" alt="small_circle" class="con_s_c1">
+            <img src="./img/small-circle.png" alt="small_circle" class="con_s_c2">
+            <img src="./img/small-circle.png" alt="small_circle" class="con_s_c3">
+
+            <!-- 큰 원 -->
+             <img src="./img/circle.png" alt="circle" class="con_c1">
+             <img src="./img/circle.png" alt="circle" class="con_c2">
+        </div>
+    </div>
+</body>
+</html>

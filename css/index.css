@@ -1,0 +1,478 @@
+/* ul 초기화 */
+ul {list-style: none;}
+/* 전체 섹션 */
+#section1,#section2,#section3,#section4 {
+  background-size: cover 80%;
+}
+.slide {
+  background-size: cover;
+}
+/* INTRO*/
+#section1 {
+  background: url(../img/bg.png);
+  background-position: center;
+}
+.maintitle{
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: transparent;
+  font-size: 150px;
+  -webkit-text-stroke: 3px #32a323;
+  font-family: 'EF_jejudoldam';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 배경_원 효과 */
+.small-circle,
+.small-circle2,
+.small-circle3,
+.small-circle4,
+.small-circle5 {
+  position: absolute;
+  z-index: 100;
+}
+
+.small-circle {
+    top: 20%;
+    animation: slide-in-br 8s infinite ease;
+}
+.small-circle2 {
+    top: 10%;
+    animation: slide-in-br2 6s infinite ;
+}
+.small-circle3 {
+    top: 20%;
+    right: 10%;
+    animation: slide-in-br3 10s infinite;
+}
+.small-circle4 {
+    bottom: 20%;
+    right: 20%;
+    animation: slide-in-br4 7s infinite;
+}
+.small-circle5 {
+  bottom: 50%;
+  right: 50%;
+  animation: slide-in-br5 5s infinite;
+}
+  @-webkit-keyframes slide-in-br {
+    0% {
+      -webkit-transform: translateY(1000px) translateX(1000px);
+      opacity: 0;
+    }
+    50% {
+        -webkit-transform: translateY(500px) translateX(500px);
+        opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(300) translateX(300);
+      opacity: 0;
+    }
+  }
+
+  @-webkit-keyframes slide-in-br2 {
+    0% {
+      -webkit-transform: translateY(1500px) translateX(100px);
+      opacity: 0;
+    }
+    50% {
+        -webkit-transform: translateY(200px) translateX(80px) scale(2);
+        opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(100px) translateX(100px);
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes slide-in-br3 {
+    0% {
+      -webkit-transform: translateY(1200px) translateX(1400px) scale(-1);
+      opacity: 0;
+    }
+    50% {
+        -webkit-transform: translateY(100px) translateX(80px) scale(0.5);
+        opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(0) translateX(20px) scale(-1);
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes slide-in-br4 {
+    0% {
+      -webkit-transform: translateY(100px) translateX(1200px) scale(1);
+      opacity: 0;
+    }
+    50% {
+        -webkit-transform: translateY(100px) translateX(80px) scale(2);
+        opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(100px) translateX(100px) scale(1);
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes slide-in-br5 {
+    0% {
+      -webkit-transform: translateY(1500px) translateX(100px) scale(0.5);
+      opacity: 0;
+    }
+    50% {
+        -webkit-transform: translateY(200px) translateX(80px) scale(1);
+        opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(100px) translateX(100px) scale(0.5);
+      opacity: 0;
+    }
+  }
+
+.textbaner {color: #fff;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  margin-left: -50%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-family: 'Paperlogy-8ExtraBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+/* ABOUT ME */
+#section2 {
+  background: url(../img/bg_2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.textcontainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 20%;
+  display: flex;
+  justify-content: space-around;
+  gap: 100px;
+}
+.textcontainer h2 {
+  color: #e7efe6;
+}
+.textcontainer h3,
+.textcontainer p {
+  color: #b9c1b8;
+}
+/* 타이핑효과 */
+.typing {
+  position: absolute;
+  top: 38%;
+  left: 13%;
+  color: #ffffff;
+  width: 34ch;
+  animation: typing 6s steps(30) infinite, blink 12s infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-size: 30px;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: #fff
+  }
+} 
+/* ul초기화 */
+.textcontainer ul {
+  display: flex;
+}
+/* left, center, right로 나눔 */
+.left {
+  width: 40%;
+}
+.left p {
+  line-height: 180%;
+}
+
+.center {
+  width: 40%;
+  display: flex;
+  flex-flow: column;
+  gap: 50px;
+}
+
+.right>ul>li {
+  width: 40%;
+}
+.right> ul>li>img {
+  width: 80%;
+}
+
+/* PROJECT, DESGIN(배경)*/
+#section3,
+#section4 {
+  background: url(../img/bg.png);
+  background-position: center;
+}
+
+.slide {
+  position: relative;
+}
+/* PROJECT, DESGIN(h1) */
+.slide h1,
+#section4 h1 {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  margin-left: -250px;
+  font-size: 80px;
+  color: transparent;
+  -webkit-text-stroke: 2px #32a323;
+  font-family: 'EF_jejudoldam';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  text-shadow:  2px 3px  #e6f2e6;
+}
+/* 컨텐츠 박스 */
+.box {
+  margin: 0 auto;
+  margin-top: 150px;
+  width: 1200px;
+  display: flex;
+  justify-content: space-around;
+  gap: 150px;
+}
+.img_box {
+  overflow: hidden;
+  width: 50%;
+  height: 500px;
+}
+.img_box>img {width: 100%;
+}
+/* 이미지박스 호버 시 이미지 슬라이드 */
+.img_slide {
+  transition: ease-in-out 3s;
+  transform: translateY(-560px);
+}
+
+.slide_textbox {
+  width: 50%;
+  font-family: 'Paperlogy-8ExtraBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+  font-style: normal;
+}
+.slide_textbox >ul {
+  padding: 0 0;
+  display: flex;
+  justify-content: start;
+}
+.slide_textbox >ul>li {
+  width: 10%;
+}
+.slide_textbox >ul>li>img {width: 100%;}
+.slide_textbox >h2 {
+  margin-bottom: 40px;
+}
+.slide_textbox >h2,
+.slide_textbox >p
+ {
+  color: #fff;
+}
+.slide_textbox >p {
+  line-height: 200%;
+}
+
+.slide_textbox>a {
+  width: 200px;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  padding: 16px 10px;
+  border: 2px solid #32a323;
+  border-radius: 50px;
+  color: #fff;
+  margin-right: 15px;
+}
+.slide_textbox>a:hover {
+  background-color: #32a323;
+  transition: all 2s;
+}
+
+/* DESGIN */
+/* li 이미지 클릭 시 block */
+#section4 .view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0,0.5);
+}
+#section4 .view>.imgBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 70%;
+  height: 80%;
+}
+#section4 .view>.imgBox>img {
+  width: 100%;
+}
+#section4 ul {
+  margin: 0 auto;
+  margin-top:200px;
+  width: 90%;
+  display: flex;
+  gap: 40px;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+#section4 ul li {
+  border: 2px solid #b9c1b8;
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-radius: 10px;
+  width: 25%;
+  cursor: pointer;
+}
+#section4 ul li:hover{
+  border-radius: 10px;
+  box-shadow: 2px 3px 2px #a2c5a2;
+}
+#section4 ul li:hover img{
+  opacity: 1;
+  transition: all 2s;
+}
+#section4 ul li>img {
+  width: 100%;
+  border-radius: 10px;
+  opacity: 0.5;
+}
+#section4 ul li>p {
+  color: #fff;
+  font-family: 'Paperlogy-8ExtraBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+  font-style: normal;
+}
+
+/* CONTACT */
+#section5 {
+  background: url(../img/bg_2-2.png);
+  background-position-y: 10%;
+}
+#section5 h1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: transparent;
+  font-size: 150px;
+  -webkit-text-stroke: 3px #32a323;
+  font-family: 'EF_jejudoldam';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+#section5 img,
+#section5 a>img
+ {
+  position: absolute;
+  overflow: hidden;
+}
+#section5 ul {
+  margin: 0 auto;
+  max-width: 700px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+#section5 p {
+  text-align: center;
+  color: #e6e6e6;
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 600;
+  font-size: 20px;
+  font-style: normal;
+}
+/* ========작은 원====== */
+.con_s_c1 {
+  top: 20%;
+  left: 10%;
+  animation: move1 4s infinite ease-in;
+}
+.con_s_c2 {
+  top: 50%;
+  right: 10%;
+  animation: move1 6s infinite ease-in;
+}
+.con_s_c3 {
+  top: 80%;
+  left: 40%;
+  animation: move1 2s infinite ease-in;
+}
+/* move1 키프레임 적용 */
+@keyframes move1 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/* ======큰 원======= */
+.con_c1,
+.con_c2,
+.con_c3 {
+  position: absolute;
+}
+.con_c1 {
+  top: -3%;
+  left: -4%;
+  animation: Move1 7s infinite ease-in;
+}
+.con_c2{
+  top: 40%;
+  right: 10%;
+  animation: Move1 10s infinite ease-in;
+}
+/* Move1(대문자 시작) 키프레임 적용 */
+@keyframes Move1 {
+  0%{
+    transform: scale(0.5);
+  }
+  50%{
+    transform: scale(0.2);
+  }
+  100%{
+    transform: scale(0.5);
+  }
+}
